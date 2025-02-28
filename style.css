@@ -42,22 +42,40 @@ body {
 }
 
 /* Tombol */
+/* Styling untuk tombol */
+/* Tambahkan jarak antar tombol */
 button {
-    background: #ffcf71;
-    color: #333;
-    border: none;
+    background: rgba(255, 207, 113, 0.8); /* Warna emas dengan transparansi */
+    color: white;
+    border: 2px solid rgba(255, 207, 113, 0.6); /* Border sedikit transparan */
     padding: 12px 20px;
     font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
     border-radius: 8px;
-    transition: transform 0.3s, background 0.3s;
-    margin: 10px;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(5px); /* Efek blur agar lebih menyatu dengan background */
+    box-shadow: 0 4px 10px rgba(255, 207, 113, 0.3); /* Bayangan untuk efek glow */
+    display: block; /* Supaya tombol berbaris ke bawah */
+    width: 200px; /* Atur lebar tombol */
+    margin: 10px auto; /* Tambahkan jarak antar tombol */
+    text-align: center;
 }
 
+/* Efek saat tombol di-hover */
 button:hover {
-    background: #ffd27f;
-    transform: scale(1.1);
+    background: rgba(255, 207, 113, 1); /* Warna emas lebih solid */
+    transform: scale(1.05);
+    border: 2px solid rgba(255, 207, 113, 1);
+    box-shadow: 0 4px 15px rgba(255, 207, 113, 0.6);
 }
+
+/* Efek saat tombol ditekan */
+button:active {
+    transform: scale(0.95);
+    background: rgba(255, 207, 113, 0.9);
+}
+
 
 /* Pop-up Pesan */
 #message-container {
